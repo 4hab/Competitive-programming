@@ -76,19 +76,7 @@ bool isPrime(int n)
 int n,m,g;
 bool dp[21][201];
 int price[21][21];
-/*int shop(int money,int type)
-{
-    if(money<0)
-        return noo;
-    if(type==g)
-        return m-money;
-    if(memo[money][type]!=-1)
-        return memo[money][type];
-    int ret=noo;
-    for(int i=1; i<=price[type][0]; i++)
-        ret=max(ret,shop(money-price[type][i],type+1));
-    return memo[money][type]=ret;
-}*/
+
 int main()
 {
     dance();
