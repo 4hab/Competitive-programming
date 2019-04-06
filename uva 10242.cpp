@@ -59,19 +59,18 @@ int main()
     double x,y;
     while(cin>>x>>y)
     {
-        pair<double,double> p1,p2,p3;
+        pair<double,double> p1,p2,p3;//p2 -> to store the point which be repeated twice
         map<pair<double,double>,int > mp;
         mp[{x,y}]++;
-        cin>>x>>y;
-        mp[{x,y}]++;
-        cin>>x>>y;
-        mp[{x,y}]++;
-        cin>>x>>y;
-        mp[{x,y}]++;
+        for(int i=0;i<3;i++)
+        {
+            cin>>x>>y;
+            mp[{x,y}]++;
+        }
         int pos=1;
         for(auto p:mp)
         {
-            if(p.second==2)
+            if(p.second==2)//repeated twice
             {
                 p2=p.first;
             }
@@ -84,7 +83,6 @@ int main()
                 p3=p.first;
         }
         cout<<p1.ff+p3.ff-p2.ff<<' '<<p3.ss+p1.ss-p2.ss<<endl;
-
     }
 }
 /**
